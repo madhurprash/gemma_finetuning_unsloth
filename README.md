@@ -25,7 +25,18 @@ This project demonstrates efficient fine-tuning of small language models using U
 Install dependencies using `uv`:
 
 ```bash
-uv sync
+curl -LsSf https://astral.sh/uv/install.sh | sh
+export PATH="$HOME/.local/bin:$PATH"
+uv venv && source .venv/bin/activate && uv pip sync pyproject.toml
+UV_PROJECT_ENVIRONMENT=.venv
+uv add zmq
+python -m ipykernel install --user --name=.venv --display-name="Python (uv env)"
+```
+
+### Run the fine-tuning job
+
+```python
+python finetune_gemma3.py
 ```
 
 ## Model and Dataset
