@@ -1,0 +1,24 @@
+[project]
+name = "gemma3-finetuning"
+version = "0.1.0"
+description = "Fine-tune Gemma 3 270M model using Unsloth"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "torch",
+    "unsloth",
+    "bitsandbytes",
+    "accelerate",
+    "xformers",
+    "peft",
+    "trl",
+    "triton",
+    "cut_cross_entropy",
+    "unsloth_zoo",
+    "sentencepiece",
+    "protobuf",
+    "datasets",
+    "huggingface_hub",
+    "hf_transfer",
+    "transformers",
+]
